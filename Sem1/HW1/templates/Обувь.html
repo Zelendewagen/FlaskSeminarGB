@@ -1,0 +1,19 @@
+{% extends 'HW1.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+
+{% block content %}
+    <div class="row">
+        <h1 class="col-12 text-monospace text-center">Обувь </h1>
+        {% for item in data %}
+            <div class="col-12 col-md-6 col-lg-4">
+                <h2>{{item.бренд }}</h2>
+                <p>{{ item.размеры }}</p>
+                <p>{{ item.цена }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
