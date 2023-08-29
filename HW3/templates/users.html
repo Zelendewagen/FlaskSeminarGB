@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+<h1> Список зарегистрированных пользователей
+</h1>
+<div class="row">
+    {% for user in users %}
+    <p class="col-12 col-md-6">Имя: {{user.firstname}}<br>
+        Фамилия: {{user.secondname}}<br>
+        Почта: {{user.email}}</p>
+    {% endfor %}
+</div>
+<button><a href="{{ url_for('add_user') }}"> Перейти к регистрации </a></button>
+</body>
+</html>
